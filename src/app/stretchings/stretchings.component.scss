@@ -1,0 +1,22 @@
+.webcam-container{
+    align-content: center;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    width: fit-content;
+    height: fit-content;
+}  
+
+.canvas{
+    grid-column: 1;
+    grid-row: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.webcam{
+    grid-column: 1;
+    grid-row: 1;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
