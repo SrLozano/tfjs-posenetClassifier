@@ -7,12 +7,14 @@ import { StretchingsComponent } from './stretchings/stretchings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material/button';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    StretchingsComponent
+    StretchingsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
