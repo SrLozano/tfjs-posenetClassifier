@@ -62,10 +62,15 @@ export class StretchingsComponent implements OnInit {
       // Se realiza la prediccion
       let output3 = await myModel.predict(data_to_predict) as tf.Tensor;
       const prediction = output3.dataSync(); // Aqui se obtiene el resultado
-      console.log(prediction);
-      let index = prediction.indexOf(Math.max.apply(null, prediction));
-      console.log("Index es: " + index)
-      console.log(Math.max.apply(null, prediction));
+
+      let pose = this.decodePrediction(prediction);
+
+      // Debug
+      if (debug_level >= 2){
+        console.log("Max value is:" + Math.max.apply(null, prediction));
+        console.log("Index of max value is: " + prediction.indexOf(Math.max.apply(null, prediction)))
+        console.log("Pose is: " + pose);
+      }
 
       // Se limpia la anterior pose para evitar sobrescribir
       this.context.clearRect(0, 0, width, height); //Esos son los pixeles a limpiar
@@ -124,6 +129,37 @@ export class StretchingsComponent implements OnInit {
     var data_transformed = tf.tensor([inputs]);
 
     return data_transformed;
+  };
+
+  // Esta funcion decodifica las predicciones del modelo en un string
+  decodePrediction = (prediction) =>{
+    
+    let index = prediction.indexOf(Math.max.apply(null, prediction));
+    let var_return = "Null";
+
+    if (index == 0){
+      var_return = "left_dorsal" 
+    } else if (index == 1){
+      var_return = "left_hip" 
+    } else if (index == 2){
+      var_return = "lotus" 
+    } else if (index == 3){
+      var_return = "mountain" 
+    } else if (index == 4){
+      var_return = "right_dorsal" 
+    } else if (index == 5){
+      var_return = "right_hip" 
+    } else if (index == 6){
+      var_return = "sun" 
+    } else if (index == 7){
+      var_return = "tree" 
+    } else if (index == 8){
+      var_return = "triangle" 
+    } else if (index == 9){
+      var_return = "y" 
+    } 
+
+    return var_return
   };
 
 }
