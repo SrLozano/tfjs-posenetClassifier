@@ -1,0 +1,82 @@
+.container{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;  
+}
+
+.header-tittle{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden; // Funciona gracias al line-height de abajo
+    display: inline-block;
+    width: 50%;
+}
+
+.header-tittle img {
+    max-width: 20px;
+    float: left;
+    margin: 0 10px 0 20;
+    padding-left: 30px;
+    padding-top: 12px;
+}
+
+.header-tittle-item{
+    line-height: 44px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 4%;
+}
+
+.header {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    display: inline-block;
+    width: 50%;
+}
+
+.header ul{
+    width: 100%;
+    margin: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header ul li{
+    margin-right: 10%;
+    list-style: none;
+}
+
+.header ul li,
+.header ul li a{
+    color: white;
+    line-height: 44px;
+    text-decoration: none;
+}
+
+p{
+    margin-top: 0;
+}
+
+nav{
+    height: 44px;
+    background-color: Black;
+}
+
+.link a {
+	color: black;
+	background-image: linear-gradient(to bottom, transparent 90%, #fcf113 0);
+	background-size: 0% 100%;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	transition: background-size .4s ease;
+}
+
+.link a:hover {
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+
