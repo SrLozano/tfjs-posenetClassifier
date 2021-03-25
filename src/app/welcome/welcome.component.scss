@@ -1,27 +1,81 @@
+// Page Styles
+.container {
+    padding: 7rem;
+    background-color: Black;
+    height: calc(100vh - 14rem);
+}
 
+.right {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+    //background-color: yellow;
+}
+
+.left {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  vertical-align: top;
+  //align-content: justify;
+  //background-color: green;
+}
+
+.tittle{
+    //height: 20%;
+    //background-color: aqua;
+    color: White;
+    font-family: Helvetica, sans-serif;
+    font-size: 430%;
+    font-weight: bold;
+    margin-top: 21%;
+    margin-bottom: 10%;
+    line-height: 1;
+}
+
+.description{
+    //height: 30%;
+    //background-color: aqua;
+    color: White;
+    font-family: Helvetica, sans-serif;
+    font-size: 135%;
+    line-height: 1.1;
+    margin-bottom: 5%;
+    //text-align: justify;
+}
+
+.button{
+  //background-color: rgb(55, 122, 222);
+  background-color:rgb(235, 32, 32)
+}
+
+// Animacion del corazon
 .heart {
+    margin-top: 40%;
+    left: 50%;
     background-color: rgb(235, 32, 32);
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: relative;
     transform: rotate(45deg);
     animation: animateHeart 1s infinite;
 
     &::before, &::after {
         content: "";
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         background-color: rgb(235, 32, 32);
         position: absolute;
         border-radius: 50%;
     }
 
     &::before {
-        left: -25px;
+        left: -50px;
     }
 
     &::after {
-        top: -25px;
+        top: -50px;
     }
 }
   
@@ -45,32 +99,3 @@
       transform: rotate(45deg) scale(0.8);
     }
   }
-  
-  
-// Page Styles
-.container {
-    padding: 5rem;
-    background-color: Black;
-    height: calc(100vh - 10rem);
-}
-
-.right {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-}
-
-.left {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-}
-
-.tittle{
-    color: White;
-    font-family: Helvetica, sans-serif;
-    font-size: 360%;
-    font-weight: bold;
-    margin-left: 1%;
-}
