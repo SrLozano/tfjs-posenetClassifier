@@ -12,7 +12,13 @@ export class MenuComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.dialog.open(DialogTutorialComponent);
+
+    // El popup solo se muestra una única vez
+    if(localStorage.getItem('popState') != 'shown'){
+      this.dialog.open(DialogTutorialComponent);
+      localStorage.setItem('popState','shown')
+    }
+    
   }
   
 }
