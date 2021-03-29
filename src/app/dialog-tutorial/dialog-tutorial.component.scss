@@ -1,0 +1,36 @@
+.button{
+    background-color: rgb(55, 122, 222);
+    //background-color:rgb(235, 32, 32)
+}
+
+.tittle{
+    color: black;
+    font-weight: bold;
+    font-size: 200%;
+    display: inline-block;
+	background-image: linear-gradient(to bottom, transparent 0%, #fcf113 0);
+	background-size: 100% 100%;
+}
+
+.subtittle{
+    //color: rgb(55, 122, 222);
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+	background-image: linear-gradient(to bottom, transparent 0%, #fcf113 0);
+	background-size: 0% 100%;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	transition: background-size .4s ease;
+    font-family: Helvetica, sans-serif;
+}
+
+.subtittle:hover {
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.image_tittle{
+    height: 2rem;
+    margin-left: 1rem;
+}

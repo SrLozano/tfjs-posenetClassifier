@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
 import { StretchingsComponent } from './stretchings/stretchings.component';
+import { YogaComponent } from './yoga/yoga.component'
 
 const routes: Routes = [  
   { path: 'welcome', component: WelcomeComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'stretchings', component: StretchingsComponent },
+  { path: 'yoga', component: YogaComponent },
   { path:'**', pathMatch: 'full', redirectTo: 'welcome'}
 ];
 
