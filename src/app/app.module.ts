@@ -11,6 +11,7 @@ import { MatCardModule} from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
+import { NgParticlesModule } from "ng-particles";
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
@@ -33,6 +34,7 @@ import { DialogTutorialComponent } from './dialog-tutorial/dialog-tutorial.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgParticlesModule,
     MatSliderModule,
     MatButtonModule,
     MatDialogModule,
