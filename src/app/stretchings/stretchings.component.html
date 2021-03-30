@@ -1,10 +1,23 @@
-<p>stretchings works!</p>
+<div class="container">
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon" class="button" routerLink="/menu">
+        <mat-icon>home</mat-icon>
+      </button>
+    <mat-progress-spinner class="progress"
+        color="accent"
+        mode="determinate"
+        value="100">
+    </mat-progress-spinner>
 
-<div class="webcam-container">
-    <video autoplay playsinline muted class="webcam" width="640" height="480" #video></video>
-    <canvas class= "canvas" #canvasEl id="mycanvas" width=640 height=480></canvas>  
+    <div class="left">
+        <canvas class= "canvas" #canvasEl id="mycanvas" width=640 height=480></canvas> 
+        <video autoplay playsinline muted class="webcam" width="640" height="480" #video></video> 
+    </div>
+    <div class="right">
+        <img src="../../assets/img/yoga/lotus.svg" alt="Exercise" class="image-exercise">
+    </div>
+   
 </div>
 
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<button mat-button color="accent">Accent</button>
-<button mat-raised-button color="warn">Warn</button>
+<!--
+
+-->
