@@ -228,7 +228,6 @@ import * as tf from '@tensorflow/tfjs';
           this.current_pose_aux = this.current_pose_aux + 1;
 
           if(this.current_pose_aux == this.poses.length){
-            alert("Fin de la sesión. ¡Felicidades!")
             setTimeout(() => { this.closeWebcam('end'); }, 2000);
           }
           this.text = this.text_poses[this.current_pose_aux];
@@ -248,7 +247,7 @@ import * as tf from '@tensorflow/tfjs';
       vid.src = "";
       this.localstream.getTracks()[0].stop();
       if(destiny == 'end'){
-        this.router.navigate(['/menu']);
+        this.router.navigate(['/congratulations']);
       } else {
         this.router.navigate(['/menu']);
       }

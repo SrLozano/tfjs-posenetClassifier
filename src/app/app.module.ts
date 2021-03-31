@@ -11,11 +11,13 @@ import { MatCardModule} from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
+import { NgParticlesModule } from "ng-particles";
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { YogaComponent } from './yoga/yoga.component';
 import { DialogTutorialComponent } from './dialog-tutorial/dialog-tutorial.component';
+import { CongratulationsComponent } from './congratulations/congratulations.component';
 
 
 @NgModule({
@@ -26,13 +28,15 @@ import { DialogTutorialComponent } from './dialog-tutorial/dialog-tutorial.compo
     MenuComponent,
     HeaderComponent,
     YogaComponent,
-    DialogTutorialComponent
+    DialogTutorialComponent,
+    CongratulationsComponent
   ],
   entryComponents: [DialogTutorialComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgParticlesModule,
     MatSliderModule,
     MatButtonModule,
     MatDialogModule,
