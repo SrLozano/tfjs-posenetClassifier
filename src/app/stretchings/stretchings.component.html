@@ -1,11 +1,11 @@
 <div class="container">
-    <button mat-fab color="warn" aria-label="Example icon button with a home icon" class="button" routerLink="/menu">
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon" class="button" (click)="closeWebcam()">
         <mat-icon>home</mat-icon>
     </button>
     <mat-progress-spinner class="progress"
-        color="accent"
+        color="primary"
         mode="determinate"
-        value="64">
+        [value]="progress_value">
     </mat-progress-spinner>
 
     <img src="../assets/img/blob.svg" alt="Decoration" class="image_progress">
@@ -16,11 +16,27 @@
     </div>
     <div class="right">
         <p class="tittle">La montaña</p>
-        <img src="../../assets/img/yoga/mountain.svg" alt="Exercise" class="image-exercise">
+        <div class="right_left">
+            <img src="../../assets/img/yoga/mountain.svg" alt="Exercise" class="image-exercise">
+        </div>
+        <div class="right_right">
+            <mat-progress-spinner class="little_progress"
+            color="warn"
+            mode="determinate"
+            [value]="progress_value"
+            [diameter]="200">
+            </mat-progress-spinner>
+        </div>
     </div>
    
 </div>
 
 <!--
+        <img src="../../assets/img/yoga/mountain.svg" alt="Exercise" class="image-exercise">
 
+          <mat-progress-spinner class="little_progress"
+            color="accent"
+            mode="determinate"
+            [value]="progress_value">
+            </mat-progress-spinner>
 -->

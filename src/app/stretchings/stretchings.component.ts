@@ -1,16 +1,18 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { drawKeypoints, drawSkeleton } from  "../utilities";
 import { Prediction } from '../prediction';
+import { Router } from '@angular/router';
 import * as posenet from '@tensorflow-models/posenet';
 import * as tf from '@tensorflow/tfjs';
-import { Container, Main } from 'ng-particles';
 
 @Component({
   selector: 'app-stretchings',
   templateUrl: './stretchings.component.html',
   styleUrls: ['./stretchings.component.scss']
 })
+
 export class StretchingsComponent implements OnInit {
+  progress_value = 0;
 
   @ViewChild('video') video: ElementRef;
   @ViewChild('canvasEl') canvasEl: ElementRef;
@@ -19,104 +21,19 @@ export class StretchingsComponent implements OnInit {
   model: any;
   context: CanvasRenderingContext2D;
   idInterval: any;
-  constructor() { } 
+  timer_progress: any;
 
-
-  id = "tsparticles";
-    
-    /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
-    particlesUrl = "http://foo.bar/particles.json";
-    
-    /* or the classic JavaScript object */
-    particlesOptions = {
-        background: {
-            color: {
-                value: "#000000"
-            }
-        },
-        fpsLimit: 40,
-        interactivity: {
-            detectsOn: "canvas",
-            events: {
-                onClick: {
-                    enable: true,
-                    mode: "push"
-                },
-                onHover: {
-                    enable: true,
-                    mode: "repulse"
-                },
-                resize: true
-            },
-            modes: {
-                bubble: {
-                    distance: 400,
-                    duration: 2,
-                    opacity: 0.8,
-                    size: 40
-                },
-                push: {
-                    quantity: 4
-                },
-                repulse: {
-                    distance: 200,
-                    duration: 0.4
-                }
-            }
-        },
-        particles: {
-            color: {
-                value: "#ffffff"
-            },
-            links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1
-            },
-            collisions: {
-                enable: true
-            },
-            move: {
-                direction: "none",
-                enable: true,
-                outMode: "bounce",
-                random: false,
-                speed: 1,
-                straight: false
-            },
-            number: {
-                density: {
-                    enable: true,
-                    value_area: 20000
-                },
-                value: 80
-            },
-            opacity: {
-                value: 0.5
-            },
-            shape: {
-                type: "circle"
-            },
-            size: {
-                random: true,
-                value: 5
-            }
-        },
-        //detectRetina: true
-    };
-
-    particlesLoaded(container: Container): void {
-        console.log(container);
-    }
-    
-    particlesInit(main: Main): void {
-        console.log(main);
-        // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-    }
+  constructor(private router: Router) { } 
 
   async ngOnInit() {
+
+    this.timer_progress = setInterval(() => {
+      this.progress_value = this.progress_value + 1;
+      if(this.progress_value == 100) { // Se para el temporizador una vez se completa
+        clearInterval(this.timer_progress); 
+      }
+    }, 100);
+
     // Variables del codigo
     let debug_level = 2; // Nivel de debuggeo necesario
     
@@ -176,7 +93,7 @@ export class StretchingsComponent implements OnInit {
 
       // Se espera al siguiente frame
       await tf.nextFrame();
-    }, 100);
+    }, 10000);
   }
 
   // Se solicita permiso para acceder a la webcam cuando se ha cargado el componente
@@ -257,5 +174,16 @@ export class StretchingsComponent implements OnInit {
 
     return var_return
   };
+
+  // Se redirige a la página principal apagando antes la webcam 
+  closeWebcam(){
+    clearInterval(this.idInterval); // Se para la prediccion
+    clearInterval(this.timer_progress); // Se para el temporizador
+    const vid = this.video.nativeElement;
+    vid.pause();
+    vid.src = "";
+    this.localstream.getTracks()[0].stop();
+    this.router.navigate(['/menu']);
+  }
 
 }
