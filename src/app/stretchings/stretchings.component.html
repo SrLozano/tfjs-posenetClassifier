@@ -1,5 +1,5 @@
 <div class="container">
-    <button mat-fab color="warn" aria-label="Example icon button with a home icon" class="button" (click)="closeWebcam()">
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon" class="button" (click)="closeWebcam('menu')">
         <mat-icon>home</mat-icon>
     </button>
     <mat-progress-spinner class="progress"
@@ -15,9 +15,9 @@
         <video autoplay playsinline muted class="webcam" width="640" height="480" #video></video> 
     </div>
     <div class="right">
-        <p class="tittle">Forma de Y</p>
+        <p class="tittle">{{text}}</p>
         <div class="right_left">
-            <img src="../../assets/img/stretchings/y.svg" alt="Exercise" class="image-exercise">
+            <img [src]="url_image" alt="Exercise" class="image-exercise">
         </div>
         <div class="right_right">
             <mat-progress-spinner class="little_progress"

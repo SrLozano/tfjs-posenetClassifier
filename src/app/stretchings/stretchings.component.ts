@@ -16,9 +16,14 @@ import * as tf from '@tensorflow/tfjs';
     // DATA BINDING VARIABLES
     progress_value_exercise = 0;
     progress_value_session = 0;
+    url_image_root = "../../assets/img/stretchings/";
+    url_image = "../../assets/img/stretchings/y.svg";
+    text = "Forma de Y";
 
     //VARIBLES DE CONTROL
-    poses = ["y", "right_dorsal", "left_dorsal", "left_hip", "right_hip"]; // Array con las poses de la sesion
+    //poses = ["y", "right_dorsal", "left_dorsal", "left_hip", "right_hip"]; // Array con las poses de la sesion
+    poses = ["y", "right_dorsal"];
+    text_poses = ["Forma de Y", "Dorsal derecho", "Dorsal izquierdo", "Cadera izquierda", "Cadera derecha"]; // Array con los textos de la interfaz
     current_pose; // Pose actual que se esta considerando
     current_pose_aux; // Indice de la pose actual en al array de poses
     pose_detected; // Pose detectada por el modelo
@@ -206,7 +211,6 @@ import * as tf from '@tensorflow/tfjs';
 
         // Si la pose detectada se corresponde con la que se debe hacer el numero de fallos vuelve a 0
         if(this.pose_detected == this.current_pose){
-          console.log("8==============D")
           this.mistakes = 0;
         } else { // En caso contrario tenemos un fallo
           this.mistakes = this.mistakes + 1;
@@ -217,22 +221,37 @@ import * as tf from '@tensorflow/tfjs';
           this.progress_value_exercise = 0;
         }
 
-        if(this.progress_value_exercise == 100) { // Se para el temporizador una vez se completa la pose
+        if(this.progress_value_exercise == 100) { // Se para el temporizador una vez se completa la pose y se pasa a la siguiente
           console.log("Pose completed");
-          clearInterval(this.idTimerProgress); 
+          this.progress_value_exercise = 0;
+          this.mistakes = 0;
+          this.current_pose_aux = this.current_pose_aux + 1;
+
+          if(this.current_pose_aux == this.poses.length){
+            alert("Fin de la sesión. ¡Felicidades!")
+            setTimeout(() => { this.closeWebcam('end'); }, 2000);
+          }
+          this.text = this.text_poses[this.current_pose_aux];
+          this.current_pose = this.poses[this.current_pose_aux];
+          this.url_image = this.url_image_root + this.current_pose + '.svg';
+          //clearInterval(this.idTimerProgress); 
         }
       }, 100);
     }
 
     // Se redirige a la página principal apagando antes la webcam 
-    closeWebcam(){
+    closeWebcam(destiny){
       clearInterval(this.idInterval); // Se para la prediccion
       clearInterval(this.idTimerProgress); // Se para el temporizador
       const vid = this.video.nativeElement;
       vid.pause();
       vid.src = "";
       this.localstream.getTracks()[0].stop();
-      this.router.navigate(['/menu']);
+      if(destiny == 'end'){
+        this.router.navigate(['/menu']);
+      } else {
+        this.router.navigate(['/menu']);
+      }
     }
 
   }
