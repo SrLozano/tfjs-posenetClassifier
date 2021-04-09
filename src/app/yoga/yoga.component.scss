@@ -1,0 +1,112 @@
+.container {
+    padding: 3rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    //background-image: url("../../assets/img/cool-background.svg");
+    //background-size: 120%, 100%;
+    //background-color: black;
+    height: calc(100vh - 6rem);
+}
+
+.button{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    background-color: rgb(55, 122, 222);
+    //color: #fcf113;
+    //background-color: rgb(55, 122, 222);
+    //background-color:rgb(235, 32, 32)
+}
+
+.progress{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.image_progress{
+    position: absolute;
+    top: -500px;
+    right: -500px;
+    width: 1400px;
+    z-index: -1;
+}
+
+/*
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
+    stroke: #fcf113;
+}
+*/
+
+.right {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+    text-align: center;
+    //background-color: blue;
+}
+
+.right_left{
+    display: inline-block;
+    width: 65%;
+    height: 80%;
+    vertical-align:top; 
+    //background-color: red;
+}
+
+.right_right{
+    display: inline-block;
+    width: 35%;
+    height: 80%;
+    vertical-align:top; 
+    //background-color: blueviolet;
+}
+
+.left {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  //background-color: green;
+  //text-align: center;
+}
+
+.canvas{
+    position: absolute;
+    top: 15%;
+    z-index: 2; // Seleciona la posición en profundidad
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.webcam{
+    position: absolute;
+    top: 15%;
+    z-index: 1;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.image-exercise{
+    //margin-top: 15%;
+    max-height: 60%;
+    width: 100%;
+}
+
+.tittle{
+    //height: 20%;
+    //background-color: aqua;
+    color: White;
+    font-family: Helvetica, sans-serif;
+    font-size: 430%;
+    font-weight: bold;
+    //margin-top: 21%;
+    margin-bottom: 10%;
+    line-height: 1;
+}
+
+.little_progress{
+    display: inline-block;
+    margin-top: 50%;
+}

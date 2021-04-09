@@ -1,0 +1,42 @@
+<div class="container">
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon" class="button" (click)="closeWebcam('menu')">
+        <mat-icon>home</mat-icon>
+    </button>
+    <mat-progress-spinner class="progress"
+        color="primary"
+        mode="determinate"
+        [value]="1">
+    </mat-progress-spinner>
+
+    <img src="../assets/img/blob.svg" alt="Decoration" class="image_progress">
+
+    <div class="left">
+        <canvas class= "canvas" #canvasEl id="mycanvas" width=640 height=480></canvas> 
+        <video autoplay playsinline muted class="webcam" width="640" height="480" #video></video> 
+    </div>
+    <div class="right">
+        <p class="tittle">{{text}}</p>
+        <div class="right_left">
+            <img [src]="url_image" alt="Exercise" class="image-exercise">
+        </div>
+        <div class="right_right">
+            <mat-progress-spinner class="little_progress"
+            color="warn"
+            mode="determinate"
+            [value]="progress_value_exercise"
+            [diameter]="200">
+            </mat-progress-spinner>
+        </div>
+    </div>
+   
+</div>
+
+<!--
+        <img src="../../assets/img/yoga/mountain.svg" alt="Exercise" class="image-exercise">
+
+          <mat-progress-spinner class="little_progress"
+            color="accent"
+            mode="determinate"
+            [value]="progress_value">
+            </mat-progress-spinner>
+-->

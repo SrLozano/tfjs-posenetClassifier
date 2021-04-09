@@ -21,8 +21,8 @@ import * as tf from '@tensorflow/tfjs';
     text = "Forma de Y";
 
     //VARIBLES DE CONTROL
-    //poses = ["y", "right_dorsal", "left_dorsal", "left_hip", "right_hip"]; // Array con las poses de la sesion
-    poses = ["y", "right_dorsal"];
+    poses = ["y", "right_dorsal", "left_dorsal", "left_hip", "right_hip"]; // Array con las poses de la sesion
+    //poses = ["y", "right_dorsal"];
     text_poses = ["Forma de Y", "Dorsal derecho", "Dorsal izquierdo", "Cadera izquierda", "Cadera derecha"]; // Array con los textos de la interfaz
     current_pose; // Pose actual que se esta considerando
     current_pose_aux; // Indice de la pose actual en al array de poses
@@ -228,7 +228,7 @@ import * as tf from '@tensorflow/tfjs';
           this.current_pose_aux = this.current_pose_aux + 1;
 
           if(this.current_pose_aux == this.poses.length){
-            setTimeout(() => { this.closeWebcam('end'); }, 2000);
+            setTimeout(() => { this.closeWebcam('end'); }, 100);
           }
           this.text = this.text_poses[this.current_pose_aux];
           this.current_pose = this.poses[this.current_pose_aux];
