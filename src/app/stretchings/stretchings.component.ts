@@ -144,8 +144,8 @@ import * as tf from '@tensorflow/tfjs';
     // Se dibujan los puntos claves y el esqueleto sobre el canvas
     drawCanvas = (pose, canvas) => {
       this.context = (canvas.nativeElement as HTMLCanvasElement).getContext('2d');
-      drawKeypoints(pose["keypoints"], 0.6, this.context);
-      drawSkeleton(pose["keypoints"], 0.7, this.context);
+      drawKeypoints(pose["keypoints"], 0.5, this.context);
+      drawSkeleton(pose["keypoints"], 0.5, this.context);
     };
 
     // Esta funcion trasnforma las predicciones en un formato adecuado al segundo clasificador

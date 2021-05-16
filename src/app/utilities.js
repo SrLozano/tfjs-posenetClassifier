@@ -19,8 +19,8 @@
  
  const color = 'aqua';
  const boundingBoxColor = 'red';
- const lineWidth = 12;
- const pointThick = 12
+ const lineWidth = 1;
+ const pointThick = 8
  
  
  export const tryResNetButtonName = 'tryResNetButton';
