@@ -20,8 +20,8 @@ export class YogaComponent implements OnInit {
   text = "La montaña";
 
   //VARIBLES DE CONTROL
-  //poses = ["mountain", "sun", "tree", "triangle", "lotus"]; // Array con las poses de la sesion
-  poses = ["mountain", "lotus"];
+  poses = ["mountain", "sun", "tree", "triangle", "lotus"]; // Array con las poses de la sesion
+  //poses = ["mountain", "sun"];
   text_poses = ["La montaña", "El sol", "El árbol", "El triángulo", "El loto"]; // Array con los textos de la interfaz
   current_pose; // Pose actual que se esta considerando
   current_pose_aux; // Indice de la pose actual en al array de poses
@@ -225,6 +225,7 @@ export class YogaComponent implements OnInit {
         this.progress_value_exercise = 0;
         this.mistakes = 0;
         this.current_pose_aux = this.current_pose_aux + 1;
+        this.progress_value_session = this.progress_value_session + 20
 
         if(this.current_pose_aux == this.poses.length){
           setTimeout(() => { this.closeWebcam('end'); }, 100);

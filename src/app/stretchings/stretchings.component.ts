@@ -226,6 +226,7 @@ import * as tf from '@tensorflow/tfjs';
           this.progress_value_exercise = 0;
           this.mistakes = 0;
           this.current_pose_aux = this.current_pose_aux + 1;
+          this.progress_value_session = this.progress_value_session + 20
 
           if(this.current_pose_aux == this.poses.length){
             setTimeout(() => { this.closeWebcam('end'); }, 100);

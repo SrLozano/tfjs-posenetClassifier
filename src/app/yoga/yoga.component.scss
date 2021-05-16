@@ -2,8 +2,10 @@
     padding: 3rem;
     padding-left: 4rem;
     padding-right: 2rem;
-    //background-image: url("../../assets/img/cool-background.svg");
-    //background-size: 120%, 100%;
+    background-image: url("../../assets/img/blob.svg");
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    background-position: 527px -500px;
     //background-color: black;
     height: calc(100vh - 6rem);
 }
@@ -25,10 +27,11 @@
 }
 
 .image_progress{
+    max-width: 100%;
     position: absolute;
     top: -500px;
     right: -500px;
-    width: 1400px;
+    //width: 1400px;
     z-index: -1;
 }
 

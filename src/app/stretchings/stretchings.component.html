@@ -5,10 +5,8 @@
     <mat-progress-spinner class="progress"
         color="primary"
         mode="determinate"
-        [value]="1">
+        [value]="progress_value_session">
     </mat-progress-spinner>
-
-    <img src="../assets/img/blob.svg" alt="Decoration" class="image_progress">
 
     <div class="left">
         <canvas class= "canvas" #canvasEl id="mycanvas" width=640 height=480></canvas> 
@@ -32,6 +30,8 @@
 </div>
 
 <!--
+        <img src="../assets/img/blob.svg" alt="Decoration" class="image_progress">
+
         <img src="../../assets/img/yoga/mountain.svg" alt="Exercise" class="image-exercise">
 
           <mat-progress-spinner class="little_progress"
