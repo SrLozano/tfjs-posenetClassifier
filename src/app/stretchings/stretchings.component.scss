@@ -14,9 +14,6 @@
     top: 15px;
     left: 25px;
     background-color: rgb(55, 122, 222);
-    //color: #fcf113;
-    //background-color: rgb(55, 122, 222);
-    //background-color:rgb(235, 32, 32)
 }
 
 .progress{
@@ -33,19 +30,12 @@
     z-index: -1;
 }
 
-/*
-:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {   
-    stroke: #fcf113;
-}
-*/
-
 .right {
     display: inline-block;
     width: 50%;
     height: 100%;
     vertical-align: top;
     text-align: center;
-    //background-color: blue;
 }
 
 .right_left{
@@ -53,7 +43,6 @@
     width: 65%;
     height: 80%;
     vertical-align:top; 
-    //background-color: red;
 }
 
 .right_right{
@@ -61,7 +50,6 @@
     width: 35%;
     height: 80%;
     vertical-align:top; 
-    //background-color: blueviolet;
 }
 
 .left {
@@ -69,8 +57,6 @@
   position: relative;
   width: 50%;
   height: 100%;
-  //background-color: green;
-  //text-align: center;
 }
 
 .canvas{
@@ -90,19 +76,15 @@
 }
 
 .image-exercise{
-    //margin-top: 15%;
     max-height: 60%;
     width: 100%;
 }
 
 .tittle{
-    //height: 20%;
-    //background-color: aqua;
     color: White;
     font-family: Helvetica, sans-serif;
     font-size: 430%;
     font-weight: bold;
-    //margin-top: 21%;
     margin-bottom: 10%;
     line-height: 1;
 }

@@ -252,5 +252,4 @@ export class YogaComponent implements OnInit {
       this.router.navigate(['/menu']);
     }
   }
-
 }

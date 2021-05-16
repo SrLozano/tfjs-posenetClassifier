@@ -253,5 +253,4 @@ import * as tf from '@tensorflow/tfjs';
         this.router.navigate(['/menu']);
       }
     }
-
   }

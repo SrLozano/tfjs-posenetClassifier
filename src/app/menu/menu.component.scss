@@ -1,6 +1,5 @@
 .example-card {
     max-width: 500px;
-    //left: 25%;
     margin: auto;
     margin-top: 12%;
 
@@ -11,27 +10,20 @@
     padding: 0rem;
     background-color: white;
     height: calc(100% - 44px);
-    //background-image: url("../../assets/img/cool-background.svg");
 }
 
 .right {
     display: inline-block;
     width: 50%;
     height: 100%;
-    //vertical-align: top;
-    //background-color: yellow;
 }
 
 .left {
   display: inline-block;
   width: 50%;
   height: 100%;
-  //vertical-align: top;
-  //align-content: justify;
-  //background-color: green;
 }
 
 .button{
     background-color: rgb(55, 122, 222);
-    //background-color:rgb(235, 32, 32)
   }
