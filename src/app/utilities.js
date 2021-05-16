@@ -22,7 +22,6 @@
  const lineWidth = 1;
  const pointThick = 8
  
- 
  export const tryResNetButtonName = 'tryResNetButton';
  export const tryResNetButtonText = '[New] Try ResNet50';
  const tryResNetButtonTextCss = 'width:100%;text-decoration:underline;';
