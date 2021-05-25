@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "aifitness",
+    "public": "dist/tfjs-posenetClassifier",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
