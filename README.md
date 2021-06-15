@@ -1,27 +1,36 @@
-# TfjsPosenetClassifier
+<h3 align="center">AI Fitness</h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+<p align="center">
+    An AI-based sports application 🧠 + 🏃🏽 = ❤️
 
-## Development server
+<!-- ABOUT THE PROJECT -->
+## About The Project 📘
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project is an AI-based sports application developed with the purpose of helping people to become better athletes. 
 
-## Code scaffolding
+The underlying idea is that users doing sport in sports apps do not know whether they are doing the exercises right or wrong. Therefore, a computer vision architecture based on neural networks has been created so that, automatically, a user can know how well he or she is doing the exercises. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+Among the benefits of this application are:
+* Improve the technique of athletes
+* Avoid injuries
+* And all this from the comfort of a web application:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Built With 🛠
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The application has been developed in Angular.
 
-## Running end-to-end tests
+The AI architecture includes Tensorflow's PoseNet model. 🧠 https://github.com/tensorflow/tfjs-models/tree/master/posenet
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Screenshots 📸
 
-## Further help
+<p align ="center">
+<img src="src/assets/img/Screenshot_2" alt="Screenshot" width="80" height="80">
+<img src="src/assets/img/Screenshot_1" alt="Screenshot" width="80" height="80">
+</p>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<!-- CONTACT -->
+## Contact 👨🏻‍💻
+
+Mario Lozano Cortés - https://mariolozano.web.app/ - mario.lozanocortes@gmail.com
