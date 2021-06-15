@@ -23,13 +23,6 @@ The application has been developed in Angular.
 
 The AI architecture includes Tensorflow's PoseNet model. 🧠 https://github.com/tensorflow/tfjs-models/tree/master/posenet
 
-## Screenshots 📸
-
-<p align ="center">
-<img src="./src/assets/img/Screenshot_2.png" alt="Screenshot" width="990" height="565">
-<br>
-<img src="./src/assets/img/Screenshot_1.png" alt="Screenshot" width="990" height="565">
-</p>
 
 <!-- CONTACT -->
 ## Contact 👨🏻‍💻
