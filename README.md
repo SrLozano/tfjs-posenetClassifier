@@ -26,9 +26,9 @@ The AI architecture includes Tensorflow's PoseNet model. 🧠 https://github.com
 ## Screenshots 📸
 
 <p align ="center">
-<img src="./src/assets/img/Screenshot_2" alt="Screenshot" width="80" height="80">
+<img src="./src/assets/img/Screenshot_2.png" alt="Screenshot" width="80" height="80">
 <br>
-<img src="./src/assets/img/Screenshot_1" alt="Screenshot" width="80" height="80">
+<img src="./src/assets/img/Screenshot_1.png" alt="Screenshot" width="80" height="80">
 </p>
 
 <!-- CONTACT -->
