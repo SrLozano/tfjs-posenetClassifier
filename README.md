@@ -24,6 +24,14 @@ The application has been developed in Angular.
 The AI architecture includes Tensorflow's PoseNet model. 🧠 https://github.com/tensorflow/tfjs-models/tree/master/posenet
 
 
+## Additional Material 🏗 
+
+This section contains two folders.
+
+* Neural network classifier model: A python notebook containing the different experiments done regarding the neural network that classifies the output obtained by the PoseNet model.
+
+* Screenshots: A set of screenshots of the final app and of the data collection app that was developed to gather the data necessary for building the neural network classifier model.
+
 <!-- CONTACT -->
 ## Contact 👨🏻‍💻
 
